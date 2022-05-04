@@ -23,7 +23,7 @@ def log_stats(mongo_collection):
     print(f"{status} status check")
 
     print("IPs:")
-    first_IPs = collec_nginx.aggregate([
+    first_IPs = mongo_collection.aggregate([
         {"$group":
          {
              "_id": "$ip",
